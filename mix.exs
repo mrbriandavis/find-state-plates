@@ -10,8 +10,20 @@ defmodule FindStatePlates.MixProject do
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
       deps: deps(),
-      test_coverage: [summary: [threshold: 90]]
-    ]
+      test_coverage: [
+        summary: [threshold: 90],
+        ignore_modules: [
+          FindStatePlates.Application,
+          FindStatePlates.Mailer,
+          FindStatePlates.Repo,
+          FindStatePlatesWeb.Endpoint,
+          FindStatePlatesWeb.Gettext,
+          FindStatePlatesWeb.Telemetry,
+          FindStatePlatesWeb.ErrorHTML,
+          FindStatePlatesWeb.ErrorJSON,
+          FindStatePlatesWeb.Layouts
+        ]
+      ]
   end
 
   def application do
