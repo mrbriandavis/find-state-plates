@@ -1,0 +1,11 @@
+# Generated or framework glue that does not change application behavior
+lib/find_state_plates/application.ex
+lib/find_state_plates/mailer.ex
+lib/find_state_plates/repo.ex
+lib/find_state_plates_web/endpoint.ex
+lib/find_state_plates_web/gettext.ex
+lib/find_state_plates_web/telemetry.ex
+lib/find_state_plates_web/controllers/error_html.ex
+lib/find_state_plates_web/controllers/error_json.ex
+lib/find_state_plates_web/components/layouts.ex
+lib/find_state_plates_web/components/layouts/*

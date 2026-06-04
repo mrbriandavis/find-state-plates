@@ -1,0 +1,12 @@
+<div class="mx-auto max-w-xl">
+  <h1 class="text-3xl font-semibold tracking-tight text-zinc-900">Log in</h1>
+  <p class="mt-2 text-sm leading-6 text-zinc-600">Return to your saved trips and keep checking off states.</p>
+
+  <.simple_form for={@form} action={~p"/users/log_in"} method="post">
+    <.input field={@form[:email]} type="email" label="Email" required />
+    <.input field={@form[:password]} type="password" label="Password" required />
+    <:actions>
+      <.button>Log in</.button>
+    </:actions>
+  </.simple_form>
+</div>

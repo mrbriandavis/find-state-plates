@@ -1,0 +1,13 @@
+<div class="mx-auto max-w-xl">
+  <h1 class="text-3xl font-semibold tracking-tight text-zinc-900">Create your account</h1>
+  <p class="mt-2 text-sm leading-6 text-zinc-600">Sign up to start tracking plates for each trip.</p>
+
+  <% form = to_form(@changeset, as: :user) %>
+  <.simple_form for={form} action={~p"/users/register"} method="post">
+    <.input field={form[:email]} type="email" label="Email" required />
+    <.input field={form[:password]} type="password" label="Password" required />
+    <:actions>
+      <.button>Create account</.button>
+    </:actions>
+  </.simple_form>
+</div>
