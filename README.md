@@ -105,15 +105,11 @@ mix test --cover
 
 Because the threshold is defined in `mix.exs`, CI will fail automatically if total coverage drops below 90%.
 
-## `.coverignore` notes
+## Coverage exclusions
 
-Use `.coverignore` for generated or framework-owned files that do not represent application logic. Typical examples in this project include:
+This project configures coverage exclusions in `mix.exs` via `test_coverage: [ignore_modules: ...]` (the mechanism used by `mix test --cover`).
 
-- endpoint and telemetry wiring
-- layout wrappers
-- generated error view modules
-
-Avoid ignoring context modules or LiveViews, since those are the key paths that should stay under coverage pressure.
+Avoid excluding context modules or LiveViews, since those are the key paths that should stay under coverage pressure.
 
 ## Sample SVG LiveView component
 
