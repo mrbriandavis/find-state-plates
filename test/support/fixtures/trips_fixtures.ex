@@ -7,7 +7,7 @@ defmodule FindStatePlates.TripsFixtures do
     {:ok, trip} =
       attrs
       |> Enum.into(%{name: "Summer road trip", started_on: ~D[2026-06-01], notes: "Cross-country plate spotting"})
-      |> Trips.create_trip(user)
+      |> then(&Trips.create_trip(user, &1))
 
     trip
   end
