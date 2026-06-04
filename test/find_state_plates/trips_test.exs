@@ -19,6 +19,18 @@ defmodule FindStatePlates.TripsTest do
     end
   end
 
+  describe "list_trips/1" do
+    test "returns only the user's trips in reverse chronological order" do
+      user = user_fixture()
+      other_user = user_fixture()
+      older_trip = trip_fixture(user, %{name: "Older trip"})
+      _other_trip = trip_fixture(other_user, %{name: "Other user's trip"})
+      newer_trip = trip_fixture(user, %{name: "Newer trip"})
+
+      assert Enum.map(Trips.list_trips(user), & &1.id) == [newer_trip.id, older_trip.id]
+    end
+  end
+
   describe "toggle_checked_state/2" do
     test "marks and unmarks a state for a trip" do
       user = user_fixture()

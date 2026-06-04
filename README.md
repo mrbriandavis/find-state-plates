@@ -73,6 +73,12 @@ Run tests with coverage locally:
 mix test --cover
 ```
 
+During iteration, prefer focused validation on the files you touched before running the final coverage pass:
+
+```bash
+mix test test/find_state_plates/trips_test.exs test/find_state_plates_web/live/trip_live_test.exs
+```
+
 To keep coverage focused on application behavior, a `.coverignore` file is included for framework-generated glue like endpoint, telemetry, and layout wrappers.
 
 ### Recommended test split
