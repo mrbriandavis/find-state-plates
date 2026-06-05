@@ -1,3 +1,4 @@
+# NOTE: `mix test --cover` does not read `.coverignore` by default. Coverage exclusions must be configured in `mix.exs` (or via a third-party coverage tool).
 # Generated or framework glue that does not change application behavior
 lib/find_state_plates/application.ex
 lib/find_state_plates/mailer.ex
