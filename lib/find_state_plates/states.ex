@@ -19,8 +19,7 @@ defmodule FindStatePlates.States do
       name: "Arizona",
       row: 3,
       col: 3,
-      trivia:
-        "Arizona is home to the Grand Canyon, one of the world’s great natural landmarks."
+      trivia: "Arizona is home to the Grand Canyon, one of the world’s great natural landmarks."
     },
     %{
       code: "AR",
@@ -62,16 +61,14 @@ defmodule FindStatePlates.States do
       name: "Florida",
       row: 6,
       col: 11,
-      trivia:
-        "Florida is the only state that borders both the Atlantic Ocean and the Gulf of Mexico."
+      trivia: "Florida is the only state that borders both the Atlantic Ocean and the Gulf of Mexico."
     },
     %{
       code: "GA",
       name: "Georgia",
       row: 5,
       col: 10,
-      trivia:
-        "Georgia is known as the Peach State, even though South Carolina grows more peaches."
+      trivia: "Georgia is known as the Peach State, even though South Carolina grows more peaches."
     },
     %{
       code: "HI",
@@ -113,8 +110,7 @@ defmodule FindStatePlates.States do
       name: "Kansas",
       row: 3,
       col: 6,
-      trivia:
-        "Kansas sits almost exactly at the geographic center of the contiguous United States."
+      trivia: "Kansas sits almost exactly at the geographic center of the contiguous United States."
     },
     %{
       code: "KY",
@@ -128,8 +124,7 @@ defmodule FindStatePlates.States do
       name: "Louisiana",
       row: 5,
       col: 7,
-      trivia:
-        "Louisiana’s legal system is based in part on civil law rather than English common law."
+      trivia: "Louisiana’s legal system is based in part on civil law rather than English common law."
     },
     %{
       code: "ME",
@@ -143,8 +138,7 @@ defmodule FindStatePlates.States do
       name: "Maryland",
       row: 3,
       col: 12,
-      trivia:
-        "Maryland’s state flag is based on the Calvert and Crossland family coats of arms."
+      trivia: "Maryland’s state flag is based on the Calvert and Crossland family coats of arms."
     },
     %{
       code: "MA",
@@ -228,8 +222,7 @@ defmodule FindStatePlates.States do
       name: "New York",
       row: 1,
       col: 12,
-      trivia:
-        "New York’s Adirondack Park is larger than Yellowstone, Everglades, Glacier, and Grand Canyon national parks combined."
+      trivia: "New York’s Adirondack Park is larger than Yellowstone, Everglades, Glacier, and Grand Canyon national parks combined."
     },
     %{
       code: "NC",
@@ -271,8 +264,7 @@ defmodule FindStatePlates.States do
       name: "Pennsylvania",
       row: 2,
       col: 11,
-      trivia:
-        "Pennsylvania’s Liberty Bell is one of the country’s most recognized historic symbols."
+      trivia: "Pennsylvania’s Liberty Bell is one of the country’s most recognized historic symbols."
     },
     %{
       code: "RI",
@@ -300,8 +292,7 @@ defmodule FindStatePlates.States do
       name: "Tennessee",
       row: 4,
       col: 9,
-      trivia:
-        "Tennessee is home to the Great Smoky Mountains National Park, the most visited U.S. national park."
+      trivia: "Tennessee is home to the Great Smoky Mountains National Park, the most visited U.S. national park."
     },
     %{
       code: "TX",
@@ -343,8 +334,7 @@ defmodule FindStatePlates.States do
       name: "West Virginia",
       row: 3,
       col: 10,
-      trivia:
-        "West Virginia is the only state located entirely within the Appalachian Mountain region."
+      trivia: "West Virginia is the only state located entirely within the Appalachian Mountain region."
     },
     %{
       code: "WI",
