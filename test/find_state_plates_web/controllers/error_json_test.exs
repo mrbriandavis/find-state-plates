@@ -2,7 +2,9 @@ defmodule FindStatePlatesWeb.ErrorJSONTest do
   use FindStatePlatesWeb.ConnCase, async: true
 
   test "renders 404" do
-    assert FindStatePlatesWeb.ErrorJSON.render("404.json", %{}) == %{errors: %{detail: "Not Found"}}
+    assert FindStatePlatesWeb.ErrorJSON.render("404.json", %{}) == %{
+             errors: %{detail: "Not Found"}
+           }
   end
 
   test "renders 500" do

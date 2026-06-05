@@ -52,15 +52,18 @@ defmodule FindStatePlatesWeb.TripLive.Show do
     <div class="space-y-8">
       <section class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
         <div>
-          <.link navigate={~p"/trips"} class="text-sm font-semibold text-zinc-500 underline underline-offset-4">
+          <.link
+            navigate={~p"/trips"}
+            class="text-sm font-semibold text-zinc-500 underline underline-offset-4"
+          >
             Back to trips
           </.link>
-          <h1 class="mt-2 text-3xl font-semibold tracking-tight text-zinc-900"><%= @trip.name %></h1>
+          <h1 class="mt-2 text-3xl font-semibold tracking-tight text-zinc-900">{@trip.name}</h1>
           <p class="mt-2 text-sm leading-6 text-zinc-600">
-            <%= @seen_count %> of <%= length(@states) %> states checked for this trip.
+            {@seen_count} of {length(@states)} states checked for this trip.
           </p>
         </div>
-        <p :if={@trip.notes} class="max-w-xl text-sm leading-6 text-zinc-600"><%= @trip.notes %></p>
+        <p :if={@trip.notes} class="max-w-xl text-sm leading-6 text-zinc-600">{@trip.notes}</p>
       </section>
 
       <section class="grid gap-8 lg:grid-cols-[1.2fr_1fr]">
@@ -75,22 +78,30 @@ defmodule FindStatePlatesWeb.TripLive.Show do
             <div :for={state <- @states} class="rounded-2xl border border-zinc-200 p-4">
               <div class="flex items-start justify-between gap-3">
                 <div>
-                  <p class="font-semibold text-zinc-900"><%= state.name %></p>
-                  <p class="text-xs uppercase tracking-[0.2em] text-zinc-500"><%= state.code %></p>
+                  <p class="font-semibold text-zinc-900">{state.name}</p>
+                  <p class="text-xs uppercase tracking-[0.2em] text-zinc-500">{state.code}</p>
                 </div>
                 <span class={[
                   "rounded-full px-2 py-1 text-xs font-semibold",
                   state.seen && "bg-emerald-100 text-emerald-700",
                   !state.seen && "bg-zinc-100 text-zinc-600"
                 ]}>
-                  <%= if state.seen, do: "Seen", else: "Not seen" %>
+                  {if state.seen, do: "Seen", else: "Not seen"}
                 </span>
               </div>
               <div class="mt-4 flex gap-2">
-                <button phx-click="toggle_state" phx-value-state={state.code} class="rounded-lg bg-zinc-900 px-3 py-2 text-sm font-semibold text-white hover:bg-zinc-700">
-                  <%= if state.seen, do: "Uncheck", else: "Mark seen" %>
+                <button
+                  phx-click="toggle_state"
+                  phx-value-state={state.code}
+                  class="rounded-lg bg-zinc-900 px-3 py-2 text-sm font-semibold text-white hover:bg-zinc-700"
+                >
+                  {if state.seen, do: "Uncheck", else: "Mark seen"}
                 </button>
-                <button phx-click="show_trivia" phx-value-state={state.code} class="rounded-lg border border-zinc-200 px-3 py-2 text-sm font-semibold text-zinc-900 hover:bg-zinc-50">
+                <button
+                  phx-click="show_trivia"
+                  phx-value-state={state.code}
+                  class="rounded-lg border border-zinc-200 px-3 py-2 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
+                >
                   Trivia
                 </button>
               </div>
@@ -103,9 +114,9 @@ defmodule FindStatePlatesWeb.TripLive.Show do
         <div class="space-y-4">
           <div>
             <p class="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">State trivia</p>
-            <h2 class="mt-2 text-2xl font-semibold text-zinc-900"><%= @selected_state.name %></h2>
+            <h2 class="mt-2 text-2xl font-semibold text-zinc-900">{@selected_state.name}</h2>
           </div>
-          <p class="text-base leading-7 text-zinc-700"><%= @selected_state.trivia %></p>
+          <p class="text-base leading-7 text-zinc-700">{@selected_state.trivia}</p>
         </div>
       </.modal>
     </div>

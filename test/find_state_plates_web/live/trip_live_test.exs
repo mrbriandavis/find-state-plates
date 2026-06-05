@@ -9,7 +9,13 @@ defmodule FindStatePlatesWeb.TripLiveTest do
     {:ok, view, _html} = live(log_in_user(conn, user), ~p"/trips")
 
     view
-    |> form("form", trip: %{name: "Pacific Coast", started_on: "2026-06-01", notes: "Check every west coast plate"})
+    |> form("form",
+      trip: %{
+        name: "Pacific Coast",
+        started_on: "2026-06-01",
+        notes: "Check every west coast plate"
+      }
+    )
     |> render_submit()
 
     assert render(view) =~ "Trip created."

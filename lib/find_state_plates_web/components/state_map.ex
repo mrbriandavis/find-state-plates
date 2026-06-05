@@ -5,7 +5,12 @@ defmodule FindStatePlatesWeb.StateMap do
 
   def state_map(assigns) do
     ~H"""
-    <svg viewBox="0 0 920 460" role="img" aria-label="Interactive US state tile map" class="w-full rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+    <svg
+      viewBox="0 0 920 460"
+      role="img"
+      aria-label="Interactive US state tile map"
+      class="w-full rounded-2xl border border-zinc-200 bg-zinc-50 p-4"
+    >
       <g :for={state <- @states}>
         <rect
           x={state.col * 54 + 20}
@@ -31,7 +36,7 @@ defmodule FindStatePlatesWeb.StateMap do
             !state.seen && "fill-zinc-700"
           ]}
         >
-          <%= state.code %>
+          {state.code}
         </text>
       </g>
     </svg>

@@ -11,7 +11,10 @@ defmodule FindStatePlatesWeb.UserAuth do
   def init(opts), do: opts
 
   def call(conn, :fetch_current_user), do: fetch_current_user(conn, [])
-  def call(conn, :redirect_if_user_is_authenticated), do: redirect_if_user_is_authenticated(conn, [])
+
+  def call(conn, :redirect_if_user_is_authenticated),
+    do: redirect_if_user_is_authenticated(conn, [])
+
   def call(conn, :require_authenticated_user), do: require_authenticated_user(conn, [])
 
   def log_in_user(conn, user) do
@@ -74,11 +77,21 @@ defmodule FindStatePlatesWeb.UserAuth do
   end
 
   def on_mount(:mount_current_user, _params, session, socket) do
-    {:cont, assign(socket, :current_user, session["user_token"] && Accounts.get_user_by_session_token(session["user_token"]))}
+    {:cont,
+     assign(
+       socket,
+       :current_user,
+       session["user_token"] && Accounts.get_user_by_session_token(session["user_token"])
+     )}
   end
 
   def on_mount(:ensure_authenticated, _params, session, socket) do
-    socket = assign(socket, :current_user, session["user_token"] && Accounts.get_user_by_session_token(session["user_token"]))
+    socket =
+      assign(
+        socket,
+        :current_user,
+        session["user_token"] && Accounts.get_user_by_session_token(session["user_token"])
+      )
 
     if socket.assigns.current_user do
       {:cont, socket}
