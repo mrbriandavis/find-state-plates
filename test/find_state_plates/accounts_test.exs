@@ -22,7 +22,9 @@ defmodule FindStatePlates.AccountsTest do
   describe "get_user_by_email_and_password/2" do
     test "returns the user with valid credentials" do
       user = user_fixture()
-      assert %User{id: ^user.id} = Accounts.get_user_by_email_and_password(user.email, valid_user_password())
+
+      assert %User{id: ^user.id} =
+               Accounts.get_user_by_email_and_password(user.email, valid_user_password())
     end
 
     test "returns nil with invalid credentials" do

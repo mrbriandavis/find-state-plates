@@ -1,6 +1,8 @@
 <section class="space-y-10">
   <div class="space-y-4">
-    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">License Plate Tracker</p>
+    <p class="text-sm font-semibold uppercase tracking-[0.3em] text-zinc-500">
+      License Plate Tracker
+    </p>
     <h1 class="text-4xl font-semibold tracking-tight text-zinc-900 sm:text-5xl">
       Track every state plate you spot on the road.
     </h1>
@@ -10,10 +12,16 @@
   </div>
 
   <div class="flex flex-wrap gap-4">
-    <.link navigate={~p"/users/register"} class="rounded-lg bg-zinc-900 px-4 py-2 text-sm font-semibold text-white hover:bg-zinc-700">
+    <.link
+      navigate={~p"/users/register"}
+      class="rounded-lg bg-zinc-900 px-4 py-2 text-sm font-semibold text-white hover:bg-zinc-700"
+    >
       Create an account
     </.link>
-    <.link navigate={~p"/users/log_in"} class="rounded-lg border border-zinc-200 px-4 py-2 text-sm font-semibold text-zinc-900 hover:bg-zinc-50">
+    <.link
+      navigate={~p"/users/log_in"}
+      class="rounded-lg border border-zinc-200 px-4 py-2 text-sm font-semibold text-zinc-900 hover:bg-zinc-50"
+    >
       Log in
     </.link>
   </div>
@@ -21,15 +29,22 @@
   <div class="grid gap-4 md:grid-cols-3">
     <article class="rounded-2xl border border-zinc-200 p-5">
       <h2 class="text-lg font-semibold text-zinc-900">Trips</h2>
-      <p class="mt-2 text-sm leading-6 text-zinc-600">Each user can keep multiple trips with notes, start dates, and a dedicated checklist of seen states.</p>
+      <p class="mt-2 text-sm leading-6 text-zinc-600">
+        Each user can keep multiple trips with notes, start dates, and a dedicated checklist of seen states.
+      </p>
     </article>
     <article class="rounded-2xl border border-zinc-200 p-5">
       <h2 class="text-lg font-semibold text-zinc-900">Live map</h2>
-      <p class="mt-2 text-sm leading-6 text-zinc-600">A lightweight SVG tile map uses <code>phx-click</code> on each state, so updates stay server-driven and fast.</p>
+      <p class="mt-2 text-sm leading-6 text-zinc-600">
+        A lightweight SVG tile map uses <code>phx-click</code>
+        on each state, so updates stay server-driven and fast.
+      </p>
     </article>
     <article class="rounded-2xl border border-zinc-200 p-5">
       <h2 class="text-lg font-semibold text-zinc-900">Trivia</h2>
-      <p class="mt-2 text-sm leading-6 text-zinc-600">Open a modal with state-specific trivia as soon as a state catches your eye.</p>
+      <p class="mt-2 text-sm leading-6 text-zinc-600">
+        Open a modal with state-specific trivia as soon as a state catches your eye.
+      </p>
     </article>
   </div>
 </section>
