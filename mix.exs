@@ -24,6 +24,7 @@ defmodule FindStatePlates.MixProject do
           FindStatePlatesWeb.Layouts
         ]
       ]
+    ]
   end
 
   def application do
